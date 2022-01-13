@@ -4,19 +4,18 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
 
-<petclinic:layout pageName="products/create">
+<petclinic:layout pageName="Products">
     <jsp:body>
         <h2>
             Create product
         </h2>
         <form:form modelAttribute="product"
                    class="form-horizontal">
-            <input type="hidden" name="id" value="${product.id}"/>
             <div class="form-group has-feedback">
                 <petclinic:inputField label="Name" name="name"/>
                 <petclinic:inputField label="Price" name="price"/>
                 <div class="control-group">
-                    <petclinic:selectField name="type" label="Type " names="${productTypes}" size="5"/>
+                    <petclinic:selectField name="productType" label="Type " names="${productType}" size="3"/>
                 </div>
             </div>
             <div class="form-group">
